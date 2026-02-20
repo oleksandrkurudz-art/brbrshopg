@@ -21,8 +21,8 @@
   const barbers = [
     { id: "yana", name: "Яна", role: "Барбер", image: "./img/Яна.jpg" },
     { id: "natan", name: "Натан", role: "Барбер", image: "./img/Натан.jpeg" },
-    { id: "ira", name: "Іра", role: "Барбер", image: "./img/Іра.jpg" },
-    { id: "alyona", name: "Альона", role: "Барбер", image: "./img/Альона.png" },
+    { id: "ira", name: "Іра", role: "Барбер", image: "./img/Ira.jpg" },
+    { id: "alyona", name: "Альона", role: "Барбер", image: "./img/Alyona.png" },
     { id: "viktoriia", name: "Вікторія", role: "Барбер", image: "./img/Вікторія.jpg" },
   ];
 
@@ -430,6 +430,7 @@
 
   setStep("barbers");
 })();
+
 
 
 

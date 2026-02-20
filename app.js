@@ -343,10 +343,10 @@
       .replaceAll("'", "&#39;");
   }
 
-  function submitBooking() {
+ async function submitBooking() {
     const phone = normalizePhone(state.customerPhone);
     const errorNode = document.getElementById("confirmError");
-
+ц
     if (!state.customerName.trim()) {
       if (errorNode) errorNode.textContent = "Вкажіть ім'я";
       return;
@@ -371,12 +371,19 @@
       },
     };
 
-    if (tg) {
-      tg.sendData(JSON.stringify(payload));
-      tg.MainButton.hide();
-    } else {
-      console.log("Telegram payload:", payload);
-    }
+  const webhookUrl = "https://oleksandrkurudz1.app.n8n.cloud/webhook-test/barber-booking";
+
+try {
+  await fetch(webhookUrl, {
+    method: "POST",
+    headers: { "Content-Type": "application/json" },
+    body: JSON.stringify(payload),
+  });
+} catch (e) {
+  if (errorNode) errorNode.textContent = "Помилка відправки. Спробуйте ще раз.";
+  return;
+}
+
 
     state.submitted = true;
     backBtn.classList.add("hidden");
@@ -394,5 +401,6 @@
 
   setStep("barbers");
 })();
+
 
 

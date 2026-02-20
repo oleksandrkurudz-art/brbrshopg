@@ -19,11 +19,11 @@
   };
 
   const barbers = [
-    { id: "yana", name: "Яна", role: "Барбер", image: "./PHOTO/Яна.jpg" },
-    { id: "natan", name: "Натан", role: "Барбер", image: "./PHOTO/Натан.jpeg" },
-    { id: "ira", name: "Іра", role: "Барбер", image: "./PHOTO/Іра.jpg" },
-    { id: "alyona", name: "Альона", role: "Барбер", image: "./PHOTO/Альона.png" },
-    { id: "viktoriia", name: "Вікторія", role: "Барбер", image: "./PHOTO/Вікторія.jpg" },
+    { id: "yana", name: "Яна", role: "Барбер", image: "./img/Яна.jpg" },
+    { id: "natan", name: "Натан", role: "Барбер", image: "./img/Натан.jpeg" },
+    { id: "ira", name: "Іра", role: "Барбер", image: "./img/Іра.jpg" },
+    { id: "alyona", name: "Альона", role: "Барбер", image: "./img/Альона.png" },
+    { id: "viktoriia", name: "Вікторія", role: "Барбер", image: "./img/Вікторія.jpg" },
   ];
 
   const services = [
@@ -430,5 +430,6 @@
 
   setStep("barbers");
 })();
+
 
 
